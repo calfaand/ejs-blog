@@ -32,6 +32,13 @@ app.get("/", function(req,res){
 app.get("/contact", function(req,res){
   res.render("contact",{contactContent: contactContent});
 });
+app.get("/home", function(req,res){
+  res.render("home",{
+    startingContent: homeStartingContent,
+    posts: posts
+  });
+});
+
 
 app.get("/about", function(req,res){
   res.render("about",{aboutContent: aboutContent});
